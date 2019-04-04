@@ -3,6 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <title>HTML - CSS Sample Html</title>
+    <style>
+        table {
+            width: 100%;
+        }
+    
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+        }
+    
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+    
+        table#t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+    
+        table#t01 th {
+            background-color: black;
+            color: white;
+        }
+    </style>
   </head>
 
   <body>
@@ -31,9 +62,30 @@
         </em>
       </i>
     </p>
+    
+        <table id="t01">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+        </table>
+  
 
-    <p style="text-align:center; border:10px solid black"><img src="../images/car1.jpeg" alt="Html5" width="204" height="102"></p>
-    <p style="text-align:center; border:10px solid black"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" alt="Html5" style="width:204px; height:102px;"><p>
+    <p style="float:right; border:10px solid black"><img src="../images/car1.jpeg" alt="Picture 1" width="204" height="102"></p>
+    <p style="float: left; border:10px solid black"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" alt="Picture 1" style="width:204px; height:102px;"><p>
+       
+        
     
   </body>
 </html>
