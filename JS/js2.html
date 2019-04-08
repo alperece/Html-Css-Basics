@@ -17,6 +17,7 @@
         person.name + " is " + person.age + " years old";
     </script>
   </fieldset>
+  <br />
   <fieldset>
     <h2>JavaScript Variables</h2>
     <p id="demo6"></p>
@@ -25,6 +26,80 @@
       var b = 2;
       var c = a + b;
       document.getElementById("demo6").innerHTML = "Toplam : " + c;
+    </script>
+  </fieldset>
+  <br />
+  <fieldset>
+    <h2>JavaScript Functions</h2>
+
+    <p>
+      This example calls a function which performs a calculation and returns the
+      result:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = myFunction(4, 3);
+      document.getElementById("demo").innerHTML = x;
+
+      function myFunction(a, b) {
+        return a * b;
+      }
+    </script>
+  </fieldset>
+  <br />
+  <fieldset>
+    <h2>JavaScript Functions</h2>
+
+    <p>This example calls a function to co nvert from Fahrenheit to Celsius:</p>
+
+    <p id="demo9"></p>
+    <script>
+      function celcus(f) {
+        return (5 / 9) * (f - 32);
+      }
+
+      document.getElementById("demo9").innerHTML = "Answer:" + celcus(77);
+    </script>
+  </fieldset>
+  <br />
+  <fieldset>
+    <h2>JavaScript Objects</h2>
+
+    <p>There are two different ways to access an object property.</p>
+
+    <p>You can use person.property or person["property"].</p>
+    <p id="demo11"></p>
+    <script>
+      var identity = {
+        name: "David",
+        surname: "Mavid",
+        age: 30
+      };
+      document.getElementById("demo11").innerHTML =
+        identity.name + " " + identity.surname + " " + identity.age;
+    </script>
+  </fieldset>
+  <br />
+  <fieldset>
+    <h2>JavaScript Objects</h2>
+
+    <p>
+      An object method is a function definition, stored as a property value.
+    </p>
+    <p id="demo12"></p>
+    <script>
+      var person = {
+        name: "Adam",
+        lastName: "Brown",
+        age: 250,
+        fullName: function() {
+          return this.name + " " + this.lastName;
+        }
+      };
+
+      document.getElementById("demo12").innerHTML = person.fullName();
     </script>
   </fieldset>
 </body>

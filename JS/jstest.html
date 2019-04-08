@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<body>
+  <fieldset>
+    <h2>JavaScript Objects</h2>
+
+    <p>
+      An object method is a function definition, stored as a property value.
+    </p>
+    <p id="demo12"></p>
+    <script>
+      var person = {
+        name: "Adam",
+        lastName: "Brown",
+        age: 250,
+        fullName: function() {
+          return this.name + " " + this.lastName;
+        }
+      };
+
+      document.getElementById("demo12").innerHTML = person.fullName();
+    </script>
+  </fieldset>
+</body>
