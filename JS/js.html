@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="text/css" name="js.css" />
+  <title>My first JavaScript!</title>
+</head>
+<body>
+  <h1>My First JavaScript</h1>
+  <fieldset>
+    <button
+      type="button"
+      onclick="document.getElementById('demo1').innerHTML=Date()"
+    >
+      Click me to display Date and Time.
+    </button>
+    <p id="demo1"></p>
+  </fieldset>
+  <br />
+
+  <fieldset>
+    <h2>What Can JavaScript Do?</h2>
+    <p id="demo2">JavaScript can change HTML content.</p>
+    <button
+      type="button"
+      onclick='document.getElementById("demo2").innerHTML="hello JavaScript!"'
+    >
+      Click Me
+    </button>
+  </fieldset>
+
+  <br />
+  <fieldset>
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>
+      In this case JavaScript changes the value of the src (source) attribute of
+      an image.
+    </p>
+    <button
+      type="button"
+      onclick="document.getElementById('myImage').src='images/animated-light-bulb-gif.gif'"
+    >
+      Turn on light
+    </button>
+    <img id="myImage" src="images/pic_bulboff.gif" style="width:100px" />
+    <button
+      type="button"
+      onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'"
+    >
+      Turn off light
+    </button>
+  </fieldset>
+  <br />
+  <fieldset>
+    <p id="demo3">JavaScript can change the style of an HTML element.</p>
+    <button
+      type="button"
+      onclick="document.getElementById('demo3').style.fontSize='35px'"
+    >
+      Click Me
+    </button>
+  </fieldset>
+  <br />
+  <fieldset>
+    <p id="demo4">JavaScript can hide HTML elements.</p>
+    <button
+      type="button"
+      onclick="document.getElementById('demo4').style.display='none'"
+    >
+      Click Me!
+    </button>
+  </fieldset>
+  <br />
+  <fieldset>
+    <p id="demo5" style="display:none">
+      JavaScript can show hidden HTML elements.
+    </p>
+    <button
+      type="button"
+      onclick="document.getElementById('demo5').style.display='block'"
+    >
+      Click Me!
+    </button>
+  </fieldset>
+</body>
