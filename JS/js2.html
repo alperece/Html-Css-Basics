@@ -102,4 +102,50 @@
       document.getElementById("demo12").innerHTML = person.fullName();
     </script>
   </fieldset>
+  <br />
+  <fieldset>
+    <p id="test"></p>
+    <script>
+      var str = "Helllo";
+      var arr = str.split("");
+      var text = "";
+      var i;
+      for (i = 0; i < arr.length; i++) {
+        text += arr[i] + "<br>";
+      }
+      document.getElementById("test").innerHTML = text;
+    </script>
+  </fieldset>
+  <br>
+<fieldset>
+ <button onclick="myFunction5()">Click Me!</button>
+<p id="Test1">i need to sleep !</p>
+  <script>
+    function myFunction5() {
+      var a = document.getElementById("Test1").innerHTML;
+      var b = a.replace("sleep", "go");
+      document.getElementById("Test1").innerHTML = b;
+    }
+  </script>
+</fieldset>
+  </br>
+<fieldset>
+  <h2>JavaScript Numbers</h2>
+
+  <p>
+    Infinity is returned if you calculate a number outside the largest
+    possible number:
+  </p>
+  <p id="test3"></p>
+  <script>
+    var a = 2;
+    var b = "";
+    while (a != Infinity) {
+      a = a * a;
+      b = b + a + "<br>";
+    }
+    document.getElementById("test3").innerHTML = b;
+  </script>
+</fieldset>
+  
 </body>

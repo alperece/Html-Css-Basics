@@ -2,23 +2,21 @@
 
 <body>
   <fieldset>
-    <h2>JavaScript Objects</h2>
+    <h2>JavaScript Numbers</h2>
 
     <p>
-      An object method is a function definition, stored as a property value.
+      Infinity is returned if you calculate a number outside the largest
+      possible number:
     </p>
-    <p id="demo12"></p>
+    <p id="test3"></p>
     <script>
-      var person = {
-        name: "Adam",
-        lastName: "Brown",
-        age: 250,
-        fullName: function() {
-          return this.name + " " + this.lastName;
-        }
-      };
-
-      document.getElementById("demo12").innerHTML = person.fullName();
+      var a = 2;
+      var b = "";
+      while (a != Infinity) {
+        a = a * a;
+        b = b + a + "<br>";
+      }
+      document.getElementById("test3").innerHTML = b;
     </script>
   </fieldset>
 </body>
