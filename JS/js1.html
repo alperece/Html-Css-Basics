@@ -100,4 +100,19 @@
       <document.getElementById('demo6').innerHTML="c";
     </script>
   </fieldset>
+  <br />
+  <fieldset>
+    <h2>JavaScript Arrays</h2>
+    <p>The push method appends a new element to an Arrays</p>
+    <button onclick="myFunction()">Click me!</button>
+    <p id="test22"></p>
+    <script>
+      var fruits = ["mango", "kivi", "banana"];
+      document.getElementById("test22").innerHTML = fruits;
+      function myFunction() {
+        fruits.push("lemon");
+        document.getElementById("test22").innerHTML = fruits;
+      }
+    </script>
+  </fieldset>
 </body>

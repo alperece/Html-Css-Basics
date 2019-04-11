@@ -2,21 +2,26 @@
 
 <body>
   <fieldset>
-    <h2>JavaScript Numbers</h2>
+    <button onclick="myFunction1()">Sort Alphabetically</button>
+    <button onclick="myFunction2()">Sort Numerically</button>
 
-    <p>
-      Infinity is returned if you calculate a number outside the largest
-      possible number:
-    </p>
-    <p id="test3"></p>
+    <p id="demo"></p>
+
     <script>
-      var a = 2;
-      var b = "";
-      while (a != Infinity) {
-        a = a * a;
-        b = b + a + "<br>";
+      var points = [40, 100, 1, 5, 25, 10];
+      document.getElementById("demo").innerHTML = points;
+
+      function myFunction1() {
+        points.sort();
+        document.getElementById("demo").innerHTML = points;
       }
-      document.getElementById("test3").innerHTML = b;
+
+      function myFunction2() {
+        points.sort(function(a, b) {
+          return a - b;
+        });
+        document.getElementById("demo").innerHTML = points;
+      }
     </script>
   </fieldset>
 </body>
