@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+  <title>JS3 Test</title>
+</head>
+<body>
+  <fieldset>
+    <h2>JavaScript Array Sort</h2>
+
+    <p>Click the buttons to sort the array alphabetically or numerically.</p>
+
+    <button onclick="myFunction2()">Sort Numerically</button>
+
+    <p id="test1"></p>
+    <script>
+      var points = [40, 100, 1, 5, 25, 10];
+      document.getElementById("test1").innerHTML = points;
+
+      function myFunction2() {
+        points.sort(function(a, b) {
+          return a - b;
+        });
+        document.getElementById("test1").innerHTML = points;
+      }
+    </script>
+  </fieldset>
+  <br />
+  <fieldset>
+    <h2>JavaScript Array Sort</h2>
+
+    <p>Click the button (again and again) to sort the array in random order.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      var points = [40, 100, 1, 5, 25, 10];
+      document.getElementById("demo").innerHTML = points;
+
+      function myFunction() {
+        points.sort(function(a, b) {
+          return 0.5 - Math.random();
+        });
+        document.getElementById("demo").innerHTML = points;
+      }
+    </script>
+  </fieldset>
+
+  <br />
+  <fieldset>
+    <button onclick="myFunction2()">Click</button>
+    <p id="test2"></p>
+    <script>
+      var cars = [
+        { type: "VOLVO", year: 2012 },
+        { type: "MERCEDES", year: 2015 },
+        { type: "BMW", year: 2000 },
+        { type: "AUDI", year: 1999 }
+      ];
+
+      displayCars();
+      function myFunction2() {
+        cars.sort(function(a, b) {
+          var x = a.type.toLowerCase();
+          var y = b.type.toLowerCase();
+          if (x < y) {
+            return -1;
+          }
+          if (x > y) {
+            return 1;
+          }
+          if ((x = y)) {
+            return 0;
+          }
+        });
+        displayCars();
+      }
+
+      function displayCars() {
+        document.getElementById("test2").innerHTML =
+          cars[0].type +
+          " " +
+          cars[0].year +
+          "<br>" +
+          cars[1].type +
+          " " +
+          cars[1].year +
+          "<br>" +
+          cars[2].type +
+          " " +
+          cars[2].year +
+          "<br>" +
+          cars[3].type +
+          " " +
+          cars[3].year;
+      }
+    </script>
+  </fieldset>
+  <br />
+  <fieldset>
+    <h2>JavaScript Array.filter()</h2>
+
+    <p>Creates a new array with all array elements that passes a test.</p>
+    <p id="test5"></p>
+    <script>
+      var ages = [10, 12, 15, 18, 19, 25, 30];
+      var over18 = ages.filter(myFunction);
+      document.getElementById("test5").innerHTML = over18;
+
+      function myFunction(value, index, array) {
+        return value > 18;
+      }
+    </script>
+  </fieldset>
+  <br />
+  <fieldset>
+    <h2>JavaScript Array.reduce()</h2>
+
+    <p>This example finds the sum of all numbers in an array:</p>
+
+    <p id="test6"></p>
+    <script>
+      var ages = [10, 12, 15, 18, 19, 25, 30];
+      var sum = ages.reduce(myFunction, 200);
+
+      document.getElementById("test6").innerHTML = sum;
+
+      function myFunction(total, value, index, array) {
+        return (total = total + value);
+      }
+    </script>
+  </fieldset>
+</body>

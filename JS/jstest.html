@@ -1,27 +1,22 @@
 <!DOCTYPE html>
+<html>
+  <body>
+    <fieldset>
+      <h2>JavaScript Array.reduce()</h2>
 
-<body>
-  <fieldset>
-    <button onclick="myFunction1()">Sort Alphabetically</button>
-    <button onclick="myFunction2()">Sort Numerically</button>
+      <p>This example finds the sum of all numbers in an array:</p>
 
-    <p id="demo"></p>
+      <p id="test6"></p>
+      <script>
+        var ages = [10, 12, 15, 18, 19, 25, 30];
+        var sum = ages.reduce(myFunction, 200);
 
-    <script>
-      var points = [40, 100, 1, 5, 25, 10];
-      document.getElementById("demo").innerHTML = points;
+        document.getElementById("test6").innerHTML = sum;
 
-      function myFunction1() {
-        points.sort();
-        document.getElementById("demo").innerHTML = points;
-      }
-
-      function myFunction2() {
-        points.sort(function(a, b) {
-          return a - b;
-        });
-        document.getElementById("demo").innerHTML = points;
-      }
-    </script>
-  </fieldset>
-</body>
+        function myFunction(total, value, index, array) {
+          return (total = total + value);
+        }
+      </script>
+    </fieldset>
+  </body>
+</html>
