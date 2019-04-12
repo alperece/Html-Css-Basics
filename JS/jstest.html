@@ -2,19 +2,18 @@
 <html>
   <body>
     <fieldset>
-      <h2>JavaScript Array.reduce()</h2>
-
-      <p>This example finds the sum of all numbers in an array:</p>
-
+      <button onclick="myFunction()">Click</button>
       <p id="test6"></p>
       <script>
-        var ages = [10, 12, 15, 18, 19, 25, 30];
-        var sum = ages.reduce(myFunction, 200);
-
-        document.getElementById("test6").innerHTML = sum;
-
-        function myFunction(total, value, index, array) {
-          return (total = total + value);
+        function myFunction() {
+          var time = new Date().getHours();
+          var greeting;
+          if (time < 12) {
+            greeting = "Good morning";
+          } else if (time < 20) {
+            greeting = "Good day";
+          } else greeting = "Good night";
+          document.getElementById("test6").innerHTML = greeting;
         }
       </script>
     </fieldset>

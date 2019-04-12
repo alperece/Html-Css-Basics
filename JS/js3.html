@@ -130,4 +130,38 @@
       }
     </script>
   </fieldset>
+  <br />
+  <fieldset>
+    <h2>JavaScript Comparisons</h2>
+
+    <p>Input your age and click the button:</p>
+    <input id="age" value="18" />
+    <button onclick="myFunction3()">Try it!</button>
+    <p id="test5"></p>
+    <script>
+      function myFunction3() {
+        var age, voteable;
+        age = Number(document.getElementById("age").value);
+
+        if (isNaN(age)) {
+          voteable = "It is not a number";
+        } else {
+          voteable = age < 18 ? "too young" : "old enough";
+        }
+        document.getElementById("test5").innerHTML = voteable;
+      }
+    </script>
+  </fieldset>
+  <br />
+  <fieldset>
+    <p>Display "Good day!" if the hour is less than 18:00:</p>
+
+    <p id="demo">Good Evening!</p>
+
+    <script>
+      if (new Date().getHours() < 18) {
+        document.getElementById("demo").innerHTML = "Good day!";
+      }
+    </script>
+  </fieldset>
 </body>
