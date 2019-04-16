@@ -164,4 +164,27 @@
       }
     </script>
   </fieldset>
+  <br />
+  <fieldset>
+    <input id="days" value="1" />
+    <button onclick="myFunction5()">Enter Number</button>
+    <p id="test8"></p>
+    <script>
+      function myFunction5() {
+        var days, text;
+        days = Number(document.getElementById("days").value);
+        switch (days) {
+          case 0:
+            text = "off";
+            break;
+          case 1:
+            text = "on";
+            break;
+          default:
+            text = "No value";
+        }
+        document.getElementById("test8").innerHTML = text;
+      }
+    </script>
+  </fieldset>
 </body>
